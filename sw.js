@@ -5,7 +5,7 @@
 const CACHE_NAME = "mi-cache-v1";
 const urlsTocache = [
     "index.html",
-    "style-css",
+    "style.css",
     "app.js",
     "offline.html"
 ];
