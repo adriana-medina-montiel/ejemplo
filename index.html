@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI primera PWA</title>
-    <!-- vincluar el manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <!-- definir el color de la barra de navegacion en el movil -->
-    <meta name="theme-color" content="#FF5722">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera PWA</title>
+
+  <!-- Vincular el manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#FF5722">
+
+  <link rel="icon" href="icons/icon-192x192.png" type="image/png">
+
+  
+  <link rel="apple-touch-icon" href="icons/icon-512x512.png">
 </head>
+
 <body>
-    <h1>bienvenido a mi PWA</h1>
-    <p>se puede instalar como aplicacion en tu celular</p>
-    <button onclick="alert('Hola desde la PWA')">Click aqui</button>
-    
+  <h1>Bienvenido a mi PWA</h1>
+  <p>Se puede instalar como aplicación en tu celular.</p>
+  <button onclick="alert('Hola desde la PWA')">Click aquí</button>
+
+  <ul>
+    <li><a href="dashboard.html">Inicio</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+
+  <!-- Registrar el Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("service-worker.js") // 👈 asegúrate de usar el mismo nombre que tu archivo real
+          .then(res => console.log("✅ Service Worker registrado:", res.scope))
+          .catch(err => console.log("❌ Service Worker no registrado:", err));
+      });
+    }
+  </script>
 </body>
 </html>
