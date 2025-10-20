@@ -31,7 +31,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
-          .register("service-worker.js") // 👈 asegúrate de usar el mismo nombre que tu archivo real
+          .register("sw.js") // 👈 asegúrate de usar el mismo nombre que tu archivo real
           .then(res => console.log("✅ Service Worker registrado:", res.scope))
           .catch(err => console.log("❌ Service Worker no registrado:", err));
       });
