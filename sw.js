@@ -1,5 +1,4 @@
 // 1. Nombre del caché y archivos a cachear
-const { cache } = require("react");
 const CACHE_NAME = "mi-cache-v1";
 const urlsToCache = [
   "index.html",
