@@ -1,0 +1,72 @@
+body.gym-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.gym-header {
+  margin-bottom: 20px;
+}
+
+.gym-title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.gym-title span {
+  color: #ff2e2e;
+}
+
+.gym-subtitle {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.gym-section {
+  margin-top: 20px;
+}
+
+.gym-info {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.gym-btn {
+  background: #ff2e2e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.gym-btn:hover {
+  background: #ff4d4d;
+}
+
+.gym-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gym-menu li {
+  margin: 12px 0;
+}
+
+.gym-menu a {
+  text-decoration: none;
+  color: #ff2e2e;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gym-menu a:hover {
+  color: #ff4d4d;
+}
