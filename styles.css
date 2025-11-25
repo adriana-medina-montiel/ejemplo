@@ -1,72 +1,81 @@
+/* Fondo y texto general */
 body.gym-container {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background: #111;
+  background: #0d0d0d; /* negro profundo */
   color: white;
   text-align: center;
 }
 
+/* Encabezado */
 .gym-header {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .gym-title {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 34px;
+  font-weight: 800;
   letter-spacing: 5px;
+  color: white;
 }
 
 .gym-title span {
-  color: #ff2e2e;
+  color: #ff7b00; /* naranja intenso */
 }
 
 .gym-subtitle {
   font-size: 16px;
-  color: #ccc;
+  color: #aaaaaa;
 }
 
+/* Sección principal */
 .gym-section {
   margin-top: 20px;
 }
 
 .gym-info {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  color: #e6e6e6;
 }
 
+/* Botón principal */
 .gym-btn {
-  background: #ff2e2e;
-  color: white;
-  padding: 12px 25px;
+  background: #ff7b00;
+  color: #0d0d0d;
+  padding: 14px 28px;
   border: none;
-  border-radius: 10px;
-  font-size: 18px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
-  margin-bottom: 20px;
   transition: 0.3s;
 }
 
 .gym-btn:hover {
-  background: #ff4d4d;
+  background: #ff9d3c;
 }
 
+/* Menú */
 .gym-menu ul {
   list-style: none;
   padding: 0;
+  margin-top: 25px;
 }
 
 .gym-menu li {
-  margin: 12px 0;
+  margin: 14px 0;
 }
 
 .gym-menu a {
   text-decoration: none;
-  color: #ff2e2e;
-  font-size: 20px;
+  color: #ff7b00;
+  font-size: 22px;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 .gym-menu a:hover {
-  color: #ff4d4d;
+  color: #ff9d3c;
 }
