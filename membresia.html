@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Membresías Olympus Gym</title>
+<style>
+  body {
+    background: #000;
+    color: #fff;
+    font-family: Arial;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #ff7a00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .planes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    background: #111;
+    border: 2px solid #ff7a00;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .card h2 {
+    color: #ff7a00;
+  }
+
+  .precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .beneficios {
+    margin: 10px 0;
+    color: #ccc;
+  }
+
+  button {
+    background: #ff7a00;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #ff9933;
+  }
+</style>
+</head>
+<body>
+
+<h1>Elige tu Membresía</h1>
+
+<div class="planes">
+
+  <!-- CLÁSICA -->
+  <div class="card">
+    <h2>Clásica</h2>
+    <p class="precio">$99 / mes</p>
+    <p class="beneficios">✔ Acceso al gym<br>✔ Rutinas básicas</p>
+    <button onclick="seleccionar('Clásica')">Elegir Clásica</button>
+  </div>
+
+  <!-- ESTÁNDAR -->
+  <div class="card">
+    <h2>Estándar</h2>
+    <p class="precio">$149 / mes</p>
+    <p class="beneficios">✔ Acceso total<br>✔ Rutinas personalizadas<br>✔ Mini clases</p>
+    <button onclick="seleccionar('Estándar')">Elegir Estándar</button>
+  </div>
+
+  <!-- PRO -->
+  <div class="card">
+    <h2>Pro</h2>
+    <p class="precio">$199 / mes</p>
+    <p class="beneficios">✔ Acceso VIP<br>✔ Rutinas premium<br>✔ Clases ilimitadas<br>✔ Soporte 24/7</p>
+    <button onclick="seleccionar('Pro')">Elegir Pro</button>
+  </div>
+
+</div>
+
+<script>
+function seleccionar(plan) {
+  // Guardamos el plan en localStorage para usarlo en la siguiente pantalla
+  localStorage.setItem("membresiaSeleccionada", plan);
+  window.location.href = "pago.html"; // ← Aquí va tu pantalla de pago
+}
+</script>
+
+</body>
+</html>
