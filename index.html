@@ -3,36 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>OlympusGym</title>
 
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#FF5722">
+  <link rel="icon" href="icons/icon-192x192.png">
 
-  <link rel="icon" href="icons/icon-192x192.png" type="image/png">
-  <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: "Segoe UI", Arial;
+      text-align: center;
+    }
 
-  <link rel="stylesheet" href="styles.css">
+    /* 🔥 CONTENEDOR GENERAL */
+    .gym-container {
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    /* 🔥 TÍTULO MÁS GRANDE + ANIMADO */
+    .gym-title {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-top: 40px;
+      letter-spacing: 3px;
+      color: #ff7a00;
+      animation: titleBounce 2.2s infinite ease-in-out;
+    }
+
+    .gym-title span {
+      color: #fff;
+    }
+
+    @keyframes titleBounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    /* 🔥 SUBTÍTULO */
+    .gym-subtitle {
+      margin-top: -10px;
+      font-size: 1.1rem;
+      color: #bbbbbb;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* 🔥 TEXTO PRINCIPAL */
+    .gym-info {
+      font-size: 1.2rem;
+      margin: 25px 10px;
+      line-height: 1.4;
+    }
+
+    /* 🔥 BOTÓN ESTILO APP MÓVIL */
+    .gym-btn {
+      width: 90%;
+      padding: 15px;
+      background: #ff7a00;
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      margin-top: 15px;
+      cursor: pointer;
+      animation: glow 2s infinite alternate;
+    }
+
+    .gym-btn:hover {
+      background: #ff8d3b;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 8px #ff7a00; }
+      100% { box-shadow: 0 0 20px #ffb46c; }
+    }
+
+    /* 🔥 MENÚ INFERIOR */
+    .gym-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 40px;
+    }
+
+    .gym-menu a {
+      color: #ff7a00;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+  </style>
 </head>
 
 <body class="gym-container">
 
-  <header class="gym-header fade-in">
-    <h1 class="gym-title wave-title">
-      O L Y M P U S <span>GYM</span>
-    </h1>
-
-    <p class="gym-subtitle slide-sub">
-      Entrena. Progresa. Supera tus límites. 💪🔥
-    </p>
+  <header>
+    <h1 class="gym-title">O L Y M P U S <span>GYM</span></h1>
+    <p class="gym-subtitle">Entrena. Progresa. Supera tus límites.</p>
   </header>
 
-  <section class="gym-section fade-in">
-    <p class="gym-info">
-      Instala la app y lleva tu entrenamiento siempre contigo.
-    </p>
+  <section>
+    <p class="gym-info">💪 Instala la app en tu celular y entrena cuando quieras.</p>
 
-    <button class="gym-btn pulse" onclick="alert('🔥 Bienvenido a Olympus Gym 🔥')">
-      EMPEZAR ENTRENAMIENTO
+    <button class="gym-btn" onclick="alert('🔥 Bienvenido a Olympus Gym 🔥')">
+      Empezar entrenamiento
     </button>
   </section>
 
@@ -44,9 +131,10 @@
 
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js")
-        .then(res => console.log("SW activo:", res.scope))
-        .catch(err => console.log("Error SW:", err));
+      navigator.serviceWorker
+        .register("sw.js")
+        .then(() => console.log("Service Worker OK"))
+        .catch(() => console.log("Error SW"));
     }
   </script>
 </body>
