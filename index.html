@@ -16,16 +16,27 @@
   <link rel="apple-touch-icon" href="icons/icon-512x512.png">
 </head>
 
-<body>
-  <h1>O L Y M P U S G Y M</h1>
-  <p>Se puede instalar como aplicación en tu celular.</p>
-  <button onclick="alert('Hola desde la PWA')">Click aquí</button>
-  <p></p>
+<body class="gym-container">
 
-  <ul>
-    <li><a href="offline.html">Inicio</a></li>
-    <li><a href="login.html">Login</a></li>
-  </ul>
+  <header class="gym-header">
+    <h1 class="gym-title">O L Y M P U S <span>GYM</span></h1>
+    <p class="gym-subtitle">Entrena. Progresa. Supera tus límites.</p>
+  </header>
+
+  <section class="gym-section">
+    <p class="gym-info">Instala la app en tu celular y lleva tu entrenamiento siempre contigo.</p>
+
+    <button class="gym-btn" onclick="alert('🔥 Bienvenido a Olympus Gym 🔥')">
+      Empezar entrenamiento
+    </button>
+  </section>
+
+  <nav class="gym-menu">
+    <ul>
+      <li><a href="offline.html">🏠 Inicio</a></li>
+      <li><a href="login.html">🔐 Login</a></li>
+    </ul>
+  </nav>
 
   <!-- Registrar el Service Worker -->
   <script>
