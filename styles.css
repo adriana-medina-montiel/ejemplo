@@ -311,5 +311,103 @@ body.rutinas-container {
   100% { transform: translateY(0); }
 }
 
+/* Fondo degradado tipo gym */
+body.gym-container {
+  background: linear-gradient(to bottom, #000, #1a1a1a, #ff7a00);
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+}
 
+/* Título principal animado tipo "WAVE" */
+.gym-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #fff;
+  text-shadow: 0 0 10px #ff7a00;
+  display: inline-block;
+  animation: glow 2s infinite alternate;
+}
 
+.gym-title span {
+  color: #ff7a00;
+}
+
+/* Subtítulo */
+.gym-subtitle {
+  font-size: 1.2rem;
+  margin-top: -10px;
+  opacity: 0;
+  animation: slideUp 1.5s forwards;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff7a00; }
+  to { text-shadow: 0 0 25px #ff5500; }
+}
+
+/* Entrada suave */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Subtitulo subiendo */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Botón estilo fuego */
+.gym-btn {
+  margin-top: 20px;
+  padding: 16px 20px;
+  width: 90%;
+  max-width: 350px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  background: #ff7a00;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #ff7a00;
+}
+
+/* Pulso del botón */
+.pulse {
+  animation: pulseAnim 1.5s infinite;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.gym-btn:hover {
+  background: #ffa64d;
+}
+
+/* Menú */
+.gym-menu ul {
+  list-style: none;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.gym-menu a {
+  color: #ff7a00;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}

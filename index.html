@@ -5,30 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OlympusGym</title>
 
-  <!-- Vincular el manifest -->
   <link rel="manifest" href="manifest.json">
-
   <meta name="theme-color" content="#FF5722">
 
   <link rel="icon" href="icons/icon-192x192.png" type="image/png">
-
-  
   <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<link rel="stylesheet" href="styles.css">
 
 <body class="gym-container">
 
-  <header class="gym-header">
-    <h1 class="gym-title">O L Y M P U S <span>GYM</span></h1>
-    <p class="gym-subtitle">Entrena. Progresa. Supera tus límites.</p>
+  <header class="gym-header fade-in">
+    <h1 class="gym-title wave-title">
+      O L Y M P U S <span>GYM</span>
+    </h1>
+
+    <p class="gym-subtitle slide-sub">
+      Entrena. Progresa. Supera tus límites. 💪🔥
+    </p>
   </header>
 
-  <section class="gym-section">
-    <p class="gym-info">Instala la app en tu celular y lleva tu entrenamiento siempre contigo.</p>
+  <section class="gym-section fade-in">
+    <p class="gym-info">
+      Instala la app y lleva tu entrenamiento siempre contigo.
+    </p>
 
-    <button class="gym-btn" onclick="alert('🔥 Bienvenido a Olympus Gym 🔥')">
-      Empezar entrenamiento
+    <button class="gym-btn pulse" onclick="alert('🔥 Bienvenido a Olympus Gym 🔥')">
+      EMPEZAR ENTRENAMIENTO
     </button>
   </section>
 
@@ -38,15 +42,11 @@
     </ul>
   </nav>
 
-  <!-- Registrar el Service Worker -->
   <script>
     if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("sw.js") // 👈 asegúrate de usar el mismo nombre que tu archivo real
-          .then(res => console.log("✅ Service Worker registrado:", res.scope))
-          .catch(err => console.log("❌ Service Worker no registrado:", err));
-      });
+      navigator.serviceWorker.register("sw.js")
+        .then(res => console.log("SW activo:", res.scope))
+        .catch(err => console.log("Error SW:", err));
     }
   </script>
 </body>
